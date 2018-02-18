@@ -40,6 +40,10 @@ $rpt_sim=$sistema_integral->get_formulario_por_id_sim($id_sistema);
 $rpt_puntuacion=$puntuacion->get_formulario_puntuacion_por_id_sim($id_sistema);
 $rpt_peso=$peso->get_formulario_peso_por_id_sim($id_sistema);
 
+
+
+
+
 $html.='
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +68,7 @@ $html.='
         width: 100%;
         text-align:center
         height: 240%;
+
              }
 
       #tabla_puntuacion3{
@@ -72,14 +77,17 @@ $html.='
         color: white;
         background: #025522";
         width: 100%;
-        
-             }
+}
+             #tabla_puntuacion4{
+}
+
+
        th{
         background-color: #4CAF50;
         color: white;
         height: 50px;
         text-align: center;
-
+        
        }
        
         #1{
@@ -138,6 +146,12 @@ $html.='
 
        }
        
+       img.center {
+ margin: auto;
+    display: block; 
+
+
+}
                  
      </style>
   </head>
@@ -146,7 +160,7 @@ $html.='
     <table width="100%" style="border-bottom: 0px solid #fffff; vertical-align: middle; font-family: serif; font-size: 9pt; color: #5c59a0;"><tr>
 <td width="10%"><img style="width: 30%" src="imagen/incuba.jpg"></td>
 <td width="80%" align="center" text-shadow: "2px 2px 4px #000000;"> <span style="font-size:25pt;"  color="#5c59a0" >SIM (SISTEMA INTEGRAL DE MONITOREO)</td>
-<td width="20%" style="text-align: right;" ><img style="width: 13%"  src="imagen/Invetsa.png" ></td></table>
+<td width="20%" style="text-align: right;" ><img style="width: 20%"  src="imagen/cabecera.png" ></td></table>
 <td width="10%" style="text-align: right;"><span style="font-weight: bold;"><img style="width: 100%" src="imagen/principal.png"></span></td></table>
 
     <table class="bpmTopnTailC">
@@ -258,7 +272,7 @@ $html.='
             $html.='
 
                   <tr style="background-color: #E7F3EB" >
-                  <td  >'.$fila->nombre.'</td>
+                  <td id="tabla_puntuacion4" >'.$fila->nombre.'</td>
                   <td >'.$fila->estado.'</td>
                   </tr>
 
@@ -368,7 +382,8 @@ else
 $html.='
     <footer>
   
-      GrayhatCorp
+<td> <img src="imagen/pollito1.png" width="20%"></td>
+
     </footer>
   </body>
  
