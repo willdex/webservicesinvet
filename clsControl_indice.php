@@ -1,5 +1,4 @@
 <?php
-include_once('clsConexion.php');
 class control_indice extends Conexion
 {
 	private $id;

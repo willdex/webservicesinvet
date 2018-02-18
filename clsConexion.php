@@ -1,61 +1,61 @@
 <?php
+
+
 class Conexion{
 //atributos
-	private $servidor;
-	private $usuario;
-	private $password;
-	private $basededatos;
-
+        private $servidor;
+        private $usuario;
+        private $password;
+        private $basedatos;
 //constructor
 public function Conexion()
 {
-	$this->servidor = "localhost";
-	$this->usuario = "root";
-	$this->password = "12345678a";
-	$this->basedatos = "invetsa";
-	
+        $this->servidor = "127.0.0.1";
+        $this->usuario = "root";
+        $this->password = "qw";
+        $this->basedatos = "invetsa";
 }
 //metedos de acceso set y get
-	public function setServidor($valor)
-	{
-		$this->servidor=$valor;
-	}
-	public function getServidor()
-	{
-		return $this->servidor;
-	}
-	public function setUsuario($valor)
-	{
-		$this->usuario=$valor;
-	}
-	public function getUsuario()
-	{
-		return $this->usuario;
-	}	
-	public function setPassword($valor)
-	{
-		$this->password=$valor;
-	}
-	public function getPassword()
-	{
-		return $this->password;	
-	}
-	public function setBasedatos($valor)
-	{
-		$this->basedatos=$valor;
-	}
-	public function getBasedatos()
-	{
-		return $this->basedatos;
-	}
+        public function setServidor($valor)
+        {
+                $this->servidor=$valor;
+        }
+        public function getServidor()
+        {
+                return $this->servidor;
+        }
+        public function setUsuario($valor)
+        {
+                $this->usuario=$valor;
+        }
+        public function getUsuario()
+        {
+                return $this->usuario;
+        }
+        public function setPassword($valor)
+        {
+                $this->password=$valor;
+        }
+        public function getPassword()
+        {
+                return $this->password;
+        }
+        public function setBasedatos($valor)
+        {
+                $this->basedatos=$valor;
+        }
+        public function getBasedatos()
+        {
+                return $this->basedatos;
+        }
 //metodos 
 public function conectar()
 {
-	$bd=mysqli_connect($this->servidor,$this->usuario,$this->password,$this->basedatos);
-	if($bd)
-		return $bd;
-	else 
-		echo "ERROR AL CONECTAR LA BASE DE DATOS...!!!";			
+        $bd=mysqli_connect($this->servidor,$this->usuario,$this->password,$this->basedatos);
+        if($bd)
+                return $bd;
+        else 
+                echo "ERROR AL CONECTAR LA BASE DE DATOS...!!!";
 }
 
 public function desconectar($cnx)
@@ -65,28 +65,27 @@ public function desconectar($cnx)
 
 public function ejecutar($sql)
 {
-	$bd=$this->conectar();	 
+        $bd=$this->conectar();   
     $registros=mysqli_query($bd,$sql);
     $this->desconectar($bd);
-	
-    return $registros;			
-}	
+
+    return $registros;
+}
 public function ejecutar_obtener_id($sql)
 {
-	$bd=$this->conectar();	 
+        $bd=$this->conectar();   
     $registros=mysqli_query($bd,$sql);
     $id=mysqli_insert_id($bd);
     $this->desconectar($bd);
-	if($registros && $id)
-	{
-	 return $id;	
-	}else
-	{
-	 return "-1";
-	}
-   		
-}	
+        if($registros && $id)
+        {
+         return $id;
+        }else
+        {
+         return "-1";
+        }
+   
+}
 
-}//end clase		
-
+}//end clase
 ?>

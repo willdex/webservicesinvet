@@ -27,7 +27,7 @@ $rpt_limpieza=$limpieza->get_formulario_por_id_sm($id_servicio);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>SERVICIO DE MANTENIMIENTO</title>
@@ -89,6 +89,7 @@ $rpt_limpieza=$limpieza->get_formulario_por_id_sm($id_servicio);
          Revision: <?php echo $rpt_sm->revision;?><br>
         </td>
       </tr>
+      
       <tr>
         <td style="text-align: left;" >
          <b>COMPAÑIA:<?php echo $rpt_sm->compania; ?>  <br>
@@ -97,6 +98,7 @@ $rpt_limpieza=$limpieza->get_formulario_por_id_sm($id_servicio);
          <b>JEFE DE PLANTA: </b><?php echo $rpt_sm->jefe_planta;?><br>
          <b>ENCARGADO DE MAQUINA:</b> <?php echo $rpt_sm->encargado_maquina;?><br>
         </td>
+
         <td style="text-align: left;" colspan="2" >
         <b>CODIGO MAQUINA:</b> <?php echo $rpt_sm->codigo_maquina; ?> <br>
         <b> FECHA:</b> <?php echo $rpt_sm->fecha; ?><br>
