@@ -152,8 +152,8 @@ $rpt_mantenimiento_limpieza=$mantenimiento_limpieza->get_formulario_por_id_hoja(
          <h3 align="center">Inversion Veterinaria S.A.</h3>
         </td>
          <td style="text-align: right">
-         <span style="margin-left: 50px">Codigo: <?php echo $rpt_sim->codigo;?>R.51 <br>
-         Revision: <?php echo $rpt_sim->revision;?> 00<br></span>
+         <span style="margin-left: 50px">Codigo: <?php echo $rpt_hoja->codigo;?><br>
+         Revision: <?php echo $rpt_hoja->revision;?> <br></span>
         </td>
         </tr>
       <tr>

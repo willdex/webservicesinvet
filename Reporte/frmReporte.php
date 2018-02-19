@@ -25,7 +25,7 @@ rpt_sistema_integral("1");
 
 
  function rpt_sistema_integral($id_sim)
-{
+{ 
 $html='';
 
 $sistema_integral=New Sistema_integral();
@@ -37,6 +37,7 @@ $peso=New Peso();
 $id_sistema=$id_sim;
 
 $rpt_sim=$sistema_integral->get_formulario_por_id_sim($id_sistema);
+
 $rpt_puntuacion=$puntuacion->get_formulario_puntuacion_por_id_sim($id_sistema);
 $rpt_peso=$peso->get_formulario_peso_por_id_sim($id_sistema);
 
